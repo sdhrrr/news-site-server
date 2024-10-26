@@ -7,7 +7,7 @@ const port =  process.env.PORT || 3000
 const API_KEY = process.env.API_KEY
 app.use(cors())
 
-app.get('/news/:country?/:category?' , (req , rsp) =>{
+app.get('/:country?/:category?' , (req , rsp) =>{
     url = urlBuilder(req.params.country , req.params.category)
     var request = new Request(url)
 
